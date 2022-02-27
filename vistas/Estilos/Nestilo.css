@@ -1,5 +1,4 @@
 /*se estable el color de fondo del cuerpo de la pagina*/
-
 body{
     background-color:rgb(250, 246, 252);
     margin: 0;
@@ -195,7 +194,6 @@ body{
             display: flex;
             flex-direction: column;
         }
-        /*clase que define el estilo del footer, se repite en todas las secciones*/
         .bottompage{
             background-color: rgb(70, 68, 68);
             display: flex;
@@ -222,7 +220,6 @@ body{
         .bottompage-footer-head-title{
             width: 100%;
         }
-        
         /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
         .enlacescontenido{
             display: flex;
@@ -282,7 +279,7 @@ body{
             font-family: 'Open Sans', sans-serif;
             text-align: center;
         }
-    
+        
         /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
         .bottompagepagos{
             display: flex;
@@ -292,24 +289,19 @@ body{
         .bottompagepagos li {
             list-style: none;
             padding: 10px;
-        }       
-
-
+        }    
 }
 /*se crea la media query correspondiente cuando el navegado usado es menor a 480px*/   
 @media only screen and (max-width:480px) {
     body{
         width: 100%;
     }
-    
     main{
         width: 100%;
         margin: 0;
     }
-
     header{
         width: 100%;
-        height: 200px;
         background-color: rgb(250, 246, 249);
     }
     .toppage{
@@ -317,7 +309,6 @@ body{
         flex-direction: column;
         justify-content: center;
         width: 100%;
-
     }
     nav{
         width: 100%;
@@ -337,7 +328,6 @@ body{
      text-decoration: none;
      color: brown;
     }
-
     .menu{
         display: flex;
         flex-direction: column;
@@ -356,7 +346,6 @@ body{
         width: 100%;
         color: blue;
     }
-    
     #grillaGeneralNoticias{
         grid-template-columns: 100%;
         grid-template-rows: 180px 450px 450px 450px 450px;
@@ -389,19 +378,22 @@ body{
     }
     .toppagenoticias{
         background-image: url(Imagenes/fondonoticias.jpg);
+        background-size: cover;
         height: 100%;
-        width: 100%;
+        width: 90%;
         display: flex;
+        justify-content: center;
+        align-items: flex-end;
         margin: auto;
         margin-bottom: 5px;
     }
     
     .toppagenoticias h2{    
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: 200;
+        font-family: Georgia, 'Times New Roman', Times, serif;
         text-align: center;
-        font-size: 40px;
-        color:black;
+        font-size: 30px;
+        font-weight: bold;
+        color:rgb(239, 240, 243);
     }
 
     .primeranoticia{
@@ -417,7 +409,6 @@ body{
         justify-items: center;
         align-items: center;
         margin-top: 5px;
-    
     }
     .terceranoticia{
         display: flex;
@@ -432,18 +423,16 @@ body{
         justify-items: center;
         align-items: center;
         margin-top: 5px;
-    
     }
-
     .noticia-titulo{
         width: 80%;
         justify-items: center;
         padding: auto;
-
     }
     .noticia-titulo h3{
         width: 100%;
         font-size: 15px;
+        font-weight: bold;
     }
     .noticia-titulo h3 a{
         text-decoration: none;
@@ -455,17 +444,15 @@ body{
         display: flex;
         flex-direction: column;
     }
-    
-
-    
-    footer{
-        margin-top: 0px;
+    .noticia-contenido p{
+        margin-top: 15px;
+        font-size: 13px;
     }
+    
     .bottompage{
         background-color: rgb(70, 68, 68);
         display: flex;
         flex-direction: column;
-        
     }
     .bottompagecontent{
         display: flex;
@@ -510,6 +497,4 @@ body{
         text-decoration: none;
         color: rgb(255, 251, 251);
     }
-
-
 }

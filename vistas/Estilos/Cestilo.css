@@ -4,349 +4,346 @@ body{
     right: 0;
     left: 0;
 }
-header{
-    width: 100%;
-    padding: auto;
+#grillaGeneralContactanos{
+    display: grid;
+}
+
+@media only screen and (min-width:922px) {
+    header{
+        width: 100%;
+        padding: auto;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-wrap: wrap;
+        background-color: white;
+    }
+    
+    .toppage{
+        position: sticky;
+    }
+    .toppage h1{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 10px;
+        padding: 5px;
+    }
+    .toppage h1 a{
+        text-decoration: none;
+        color: blue;
+    }
+    
+    nav{
+        padding: 1px;
+        display: flex;
+        text-align: center;
+    }
+    .menu{
+        list-style: none;
+        padding: 0;
+        width: auto;
+        max-width: 800px;
+        margin: auto;
+    }
+    .menu li{
+        display: inline-block;
+        text-align: center;
+    }
+    .menu li a{
+        text-decoration: none;
+        color: rgba(10, 6, 6, 0.979);
+        padding: 20px;
+        display: block;
+    }
+    .menu li a:hover{
+        background-color: rgb(248, 246, 248);
+        border-bottom: solid 1px blue;
+    }
+    .nav-link-active{
+        background-color:whitesmoke;
+        font-weight: bold;
+        border-bottom: solid 1px red;
+    }
+    main{
+        left: 0;
+        right: 0;
+    }
+    #grillaGeneralContactanos{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 250px 250px;
+        grid-template-areas: "portada portada"
+                            "formulario descripciona"
+                            "formulario descripcionb";
+    }
+    #portada{
+        grid-area: portada;
+    }
+    #seccion-formulario{
+        grid-area: formulario;
+    }
+    #seccion-descripcion-a{
+        grid-area: descripciona;
+        display: flex;
+        flex-direction: column;
+    }
+    #seccion-descripcion-b{
+        grid-area: descripcionb;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .toppagecontacto{
+        background-image: url(Imagenes/fondocontacto.jpg);
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    .toppagecontacto h2{
+        margin: auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 50px;
+        color:rgb(49, 49, 240);
+    }
+    .toppagecontacto h2:hover{
+        font-size: 60px;
+        transition: 1.5s;
+    }
+    
+    .formulario{
     display: flex;
     justify-content: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    flex-wrap: wrap;
+    align-items: center;
     background-color: white;
+    }
+    
+    .formulariobox1{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        padding: 50px;
+        height: 100%;
+        width: 100%;
+    }
+    .formulario-titulo{
+        display: flex;
+        margin: 0px;
+        width: 100%;
+        height: 25%;
+        justify-content: center;
+        align-items: center;
+    }
+    .formulario-titulo h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        color: orangered;
+        width: 100%;
+    }
+    .formulario-contenido{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0px;
+        height: 75%;
+    }
+    .fbox1aname{
+        width: 50%;
+    }
+    .fbox1aname input{
+        height: 30px;
+        width: 80%;
+        border: none;
+        border-bottom: red solid 1px;
+    }
+    .fbox1amail{
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+    .fbox1amail input{
+        height: 30px;
+        width: 80%;
+        border: none;
+        border-bottom: red solid 1px;
+    }
+    .fbox1amensaje{
+        height: 150px;
+        width: 100%
+    }
+    .fbox1amensaje input{
+        width: 100%;
+        height: 100%;
+    }
+    .fbox1asendm{
+        width: 49%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fbox1asendm button{
+        height: 50px;
+        width: 90%;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 15px;
+        color: white;
+        background-color:dodgerblue; 
+    }   
+    .fbox1aclean{
+        width: 49%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fbox1aclean button{
+        height: 50px;
+        width: 50%;
+        font-family:'Times New Roman', Times, serif;
+        font-size:15px;
+        color: black;
+        background-color: white;
+    }
+    .formulario-descripcion-a1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 25%;
+        width: 100%;
+    }
+    .formulario-descripcion-a1 h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        color: orangered;
+    }
+    .formulario-descripcion-a2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 75%;
+        width: 100%;
+    }
+    .atencion-cliente{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 25%;
+        width: 100%;
+    }
+    .atencion-cliente h3{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        color: orangered;
+    }
+    .contactodatos{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 75%;
+        width: 100%;
+    }
+    .contactodatos p{
+        margin: 5px;
+        padding: 5px;
+    }
+    .bottompage{
+        background-color: rgb(70, 68, 68);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+    }
+    /*se crea la clase que define el contenedor principal de cada seccion del footer*/
+    .bottompagecontent{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottompage-footer-head{
+        height: 30%;
+    }
+    .bottompage-footer-body{
+        height: 70%;
+    }
+    .bottompage-footer-head-title{
+        width: 100%;
+    }
+    /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
+    .enlacescontenido{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .titulos-footer{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+    /*se crea la clase que define los tamaños y especiados de los iconos de los enlaces de interes*/
+    .link-icon{
+        width: 30%;
+        padding-left: 20px;
+    }
+    /*se crea la clase que define el nombre de cada enlace de intereses*/
+    .link-title{
+        width: 70%;
+    }
+    /*se crea la clase que define el estilo de cada nombre de los enlaces de intereses*/
+    .link-title h5{
+        width: 80%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    /*se crea la clase que formate el estilo de la etiqueta a*/
+    .link-title h5 a{
+        text-decoration: none;
+        color: white;
+    }
+    .link-title h5 a:hover{
+        color: rgb(22, 133, 236);
+    }
+    .contacto-contenido{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contacto-datos{
+        display: inline;
+        height: 100%;
+    }
+    .contacto-datos li{
+        list-style: none;
+        width: 100%;
+        height: 30%;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+    
+    /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
+    .bottompagepagos{
+        display: flex;
+        flex-direction: column;
+    }
+    /**/
+    .bottompagepagos li {
+        list-style: none;
+        padding: 10px;
+    }       
 }
 
-.toppage{
-    position: sticky;
-}
-.toppage h1{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 10px;
-    padding: 5px;
-}
-.toppage h1 a{
-    text-decoration: none;
-    color: blue;
-}
-
-nav{
-    padding: 1px;
-    display: flex;
-    text-align: center;
-}
-.menu{
-    list-style: none;
-    padding: 0;
-    width: auto;
-    max-width: 800px;
-    margin: auto;
-}
-.menu li{
-    display: inline-block;
-    text-align: center;
-}
-.menu li a{
-    text-decoration: none;
-    color: rgba(10, 6, 6, 0.979);
-    padding: 20px;
-    display: block;
-}
-.menu li a:hover{
-    background-color: rgb(248, 246, 248);
-    border-bottom: solid 1px blue;
-}
-.nav-link-active{
-    background-color:whitesmoke;
-    font-weight: bold;
-    border-bottom: solid 1px red;
-}
-main{
-    left: 0;
-    right: 0;
-}
-
-.toppagecontacto{
-    background-image: url(Imagenes/fondocontacto.jpg);
-    background-size: cover;
-    height: 300px;
-    width: 100%;
-    display: flex;
-    margin: auto;
-    padding-bottom: 10px;
-}
-.toppagecontacto h2{
-    margin: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    color:rgb(49, 49, 240);
-}
-.toppagecontacto h2:hover{
-    font-size: 60px;
-    transition: 1.5s;
-}
-
-.formulario{
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: white;
-}
-
-.formulariobox1{
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
-    padding: 100px;
-    height: 500px;
-    width: 50%;
-}
-.formulariotitulo{
-    display: flex;
-    margin: 0px;
-    height: 100px;
-    justify-content: center;
-}
-
-.formulariotitulo h2{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 40px;
-    color: tomato;
-    margin: 0px;
-    height: 100px;
-
-}
-
-.fbox1a{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0px;
-    height: 400px;
-}
-.fbox1aname{
-    width: 50%;
-}
-.fbox1aname input{
-    height: 30px;
-    width: 80%;
-    border: none;
-    border-bottom: red solid 1px;
-}
-
-.fbox1amail{
-    width: 50%;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-.fbox1amail input{
-    height: 30px;
-    width: 80%;
-    border: none;
-    border-bottom: red solid 1px;
-}
-
-.fbox1amensaje{
-    height: 150px;
-    width: 100%
-}
-.fbox1amensaje input{
-    width: 100%;
-    height: 100%;
-
-}
-.fbox1asendm{
-    width: 49%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fbox1asendm button{
-    height: 50px;
-    width: 90%;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 15px;
-    color: white;
-    background-color:dodgerblue; 
-}   
-
-.fbox1aclean{
-    width: 49%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fbox1aclean button{
-    height: 50px;
-    width: 50%;
-    font-family:'Times New Roman', Times, serif;
-    font-size:15px;
-    color: black;
-    background-color: white;
-}
-
-
-
-.formulariobox2{
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
-    padding: 10px;
-    height: 500px;
-    width: 50%;
-}
-
-.formulariobox2 div{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 2px;
-    width: 100%;
-    height: 100px;
-}
-
-
-.formulariocontacto{
-    display: flex;
-    margin: 0px;
-    justify-content: center;
-    align-items: center;
-}
-.formulariocontacto h2{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 40px;
-    color: tomato;
-    margin: 0px;
-}
-
-.contactodescripcion{
-    display: flex;
-    flex-direction: column;
-    font-weight: 100px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.atencioncliente{
-    margin: 0;
-    padding: 0;
-}
-.atencioncliente h3{
-    display: flex;
-    align-items: left;
-    margin: 0;
-    padding: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 80px;
-    text-align: left;
-}
-
-
-.contactodatos{
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.contactodatos p{
-    margin: 0;
-    padding: 0;
-}
-.bottompage{
-    background-color: rgb(70, 68, 68);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 300px;
-}
-/*se crea la clase que define el contenedor principal de cada seccion del footer*/
-.bottompagecontent{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.bottompage-footer-head{
-    height: 30%;
-}
-.bottompage-footer-body{
-    height: 70%;
-}
-.bottompage-footer-head-title{
-    width: 100%;
-}
-
-/*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
-.enlacescontenido{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.titulos-footer{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    color: white;
-}
-/*se crea la clase que define los tamaños y especiados de los iconos de los enlaces de interes*/
-.link-icon{
-    width: 30%;
-    padding-left: 20px;
-}
-/*se crea la clase que define el nombre de cada enlace de intereses*/
-.link-title{
-    width: 70%;
-}
-/*se crea la clase que define el estilo de cada nombre de los enlaces de intereses*/
-.link-title h5{
-    width: 80%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-}
-/*se crea la clase que formate el estilo de la etiqueta a*/
-.link-title h5 a{
-    text-decoration: none;
-    color: white;
-}
-.link-title h5 a:hover{
-    color: rgb(22, 133, 236);
-}
-.contacto-contenido{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.contacto-datos{
-    display: inline;
-    height: 100%;
-}
-.contacto-datos li{
-    list-style: none;
-    width: 100%;
-    height: 30%;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-}
-
-/*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
-.bottompagepagos{
-    display: flex;
-    flex-direction: column;
-}
-/**/
-.bottompagepagos li {
-    list-style: none;
-    padding: 10px;
-}       

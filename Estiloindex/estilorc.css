@@ -16,7 +16,7 @@
     /* se crean las 3 columnas y 4 filas de la grilla con los nombres correspondientes*/
     #grillaGeneral{
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 700px 300px 300px 400px;
+        grid-template-rows: 700px 300px 300px 450px;
         background-color: white;
         grid-template-areas: "portada portada portada"
                              "asecon asetri asefin"
@@ -58,7 +58,7 @@
         grid-area: portada2;
         width: 100%;
         height: 100%;
-        background-color: rgb(44, 24, 14);
+        background-color: rgb(226, 243, 240);
     }
 
     /* se definen los valores del header que incluye el titulo principal y el menu del navigation*/
@@ -72,56 +72,6 @@
         right: 0;
         flex-wrap: wrap;
         background-color: white;
-    }
-    /*se crea la clasee topppage para dar forma al titulo principal*/
-    .toppage{
-        position: sticky;   
-    }
-    /*clase correspondiente a el tamanio y estilo del titulo */
-    .toppage h1{
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin: 10px;
-        padding: 5px;
-    }
-    /*clase correspondiente para retirar el text decoration del titulo vinculado a la pagina principal*/
-    .toppage h1 a{
-        text-decoration: none;
-        color: blue;
-    }
-    
-    /* clase correspondiente para dar forma al menu de la navegacion */
-    nav{
-        display: flex;
-        text-align: center;
-    }
-    /* se estable la clase para que el menu se vea en linea*/
-    .menu{
-        list-style: none;
-        padding: 0;
-        width: auto;
-        margin: auto;
-    }
-    /*estable la clase para que los li's abarquen todo el espacio del menu*/
-    .menu li{
-        display: inline-block;
-        text-align: center;
-    }
-    /*se estable la clase par que la etiqueta a abarque el contenido total*/
-    .menu li a{
-        text-decoration: none;
-        color: rgba(10, 6, 6, 0.979);
-        padding: 20px;
-        display: block;
-    }
-    /*se agrega un color de fondo blanco a la seudo clase para cuando el cursor sea desplazado por arriba se puede diferenciar*/
-    .menu li a:hover{
-        background-color: rgb(248, 246, 248);
-        border-bottom: solid 1px blue;
-    }
-    .nav-link-active{
-        background-color:whitesmoke;
-        font-weight: bold;
-        border-bottom: solid 1px red;
     }
 
     /*clase correspondiente al fondo de la portada principal, agregando una altura y este centrada*/
@@ -187,8 +137,6 @@
         transition: 2s;
     }
 
-
-
     /*clase general que define el estilo de los contenedores que llevan las secciones de los servicios principales*/
     .boxcontent{
         display: flex;
@@ -204,11 +152,9 @@
         display: flex;
         justify-content: center;
     }
-
     .bi-calculator{
         font-size: 40px;
     }
-   
     .bi-bank2{
         font-size: 40px;
     }
@@ -238,7 +184,6 @@
         text-decoration: none;
         color: black;
     }
-
     /*clase que define el estilo de la seudo clase hover con fondo rgb azul*/
     .boxcontentdatos h3 a:hover{
         color:rgb(47, 112, 231);
@@ -246,7 +191,6 @@
         font-weight: bold;
         transition: 1.2s;
     }
-
     /*clase que define el estilo de ul*/
     .boxcontentdatos ul{
         margin: 0;
@@ -260,48 +204,42 @@
         font-size: 12px;
         text-align: left;
     }
-    /*clase que define el estilo general de la segunda portada que contiene la mision, vision y valores de la empresa */
-    .fondo2{
+    .portada2-seccion-head{
         display: flex;
-        flex-direction: row;
-        background-color: rgb(94, 61, 61);
-        height: 100%;
-    }
-    /*clase general que define el footer*/
-    .box2content{
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        width: 50%;
-    
-    }
-    /*clase define el div que contiene las secciones de vision, mision y valores*/
-    .box2content div{
-        display: flex;
+        justify-content: center;
         align-items: center;
+        height: 20%;
+    }
+    .portada2-seccion-head-titulo{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 40px;
+        color: rgb(51, 50, 48);
+    }
+    .portada2-seccion-contenido{
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80%;
     }
-    /*se estable es estilo del titulo principal*/
-    .box2content h2{
-        color: rgb(231, 160, 66);
-        margin-top: 40px;
+    .portada2-contenido{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
     }
-    .bi-calculator{
-        font-size: 30px;
+    .portada2-contenido-titulo{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        color: rgb(221, 97, 15);
+        font-weight: bold;
     }
-    /*se estable es estilo del los titulos Valores, Vision y Mision*/
-    .box2content h4{
-        margin: 0;
-        color: whitesmoke;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
+    .descripcion-contenido{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(12, 12, 11);
+        font-size: 18px;
     }
-    /*se estable el estilo de los parrafos explicativo de la vision, mision y valores */
-    .box2content p{
-        color: wheat;
-        margin-left: 150px;
-        margin-right: 150px;
-    }
+    
     /*se crea la clase estilo general del footer*/
     .bottompage{
         background-color: rgb(70, 68, 68);
@@ -329,7 +267,6 @@
     .bottompage-footer-head-title{
         width: 100%;
     }
-    
     /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
     .enlacescontenido{
         display: flex;
@@ -389,7 +326,6 @@
         font-family: 'Open Sans', sans-serif;
         text-align: center;
     }
-
     /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
     .bottompagepagos{
         display: flex;
@@ -400,20 +336,15 @@
         list-style: none;
         padding: 10px;
     }
-   
-    
 }
 
 /*se crea la media query correspondiente a formatos que tengan un width menor a 480px*/
 @media only screen and (max-width: 480px) {
     body{
         width: 100%;
-    }
-    
-    
+    }   
     header{
         width: 100%;
-        height: 200px;
         background-color: rgb(250, 246, 249);
     }
     .toppage{
@@ -461,11 +392,12 @@
         color: blue;
     }
    
-
     main{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-
 
     #grillaGeneral{
         grid-template-columns: 100%;
@@ -485,15 +417,15 @@
     }
     #portada{
         grid-area: portada;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-image: url(imagenes/portada.jpg);
         background-size: cover;
     }
     #primerservicio{
         grid-area: asecon;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
         display: flex;
@@ -503,8 +435,8 @@
     }
     #segundoservicio{
         grid-area: asetri;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
         display: flex;
@@ -514,8 +446,8 @@
     }
     #tercerservicio{
         grid-area: asefin;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
         display: flex;
@@ -525,8 +457,8 @@
     }
     #cuartoservicio{
         grid-area: aselab;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
         display: flex;
@@ -536,8 +468,8 @@
     }
     #quintoservicio{
         grid-area: capa;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
         display: flex;
@@ -547,15 +479,15 @@
     }
     #sextoservicio{
         grid-area: blanco;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
     }
     #portada2{
         grid-area: portada2;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-color: rgb(70, 68, 68);
     }
     
@@ -592,6 +524,22 @@
         flex-direction: column;
         align-items: center;
     }
+    .bi-calculator{
+        font-size: 30px;
+    }
+    .bi-bank2{
+        font-size: 30px;
+    }
+    .bi-bar-chart-line-fill{
+        font-size: 30px;
+    }
+    .bi-bar-chart-line-fill{
+        font-size: 30px;
+    }
+
+    .bi-mortarboard{
+        font-size: 30px;
+    }
     .boxcontentdatos{
         display: flex;
         flex-direction: column;
@@ -606,40 +554,41 @@
         text-decoration: none;
         color: blue;
     }
-    .box2content{
-        width: 100%;
+    .portada2-seccion-head{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
     }
-    .box2content h2{
-        text-align: center;
-        color: darkorange;
-        font-size: 25px;
-        margin-bottom: 10px;
+    .portada2-seccion-head-titulo{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        color: whitesmoke;
     }
-    .box2content h4{
-        text-align: center;
-        color: white;
-        font-size: 15px;
-        margin-top: 5px;
-    }
-    .contenido-empresa{
-        width: 100%;
+    .portada2-seccion-contenido{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .portada2-contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .portada2-contenido-titulo{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        color: darkgoldenrod;
     }
     .descripcion-contenido{
-        width: 100%;
-        text-align: center;
-        font-size: 13px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: bisque;
-        margin-bottom: 5px;
-    }
-
-    footer{
-        margin-top: 0px;
-    }
+        font-size: 12px;
+        color: whitesmoke;
+        width: 95%;
+    }   
     .bottompage{
         background-color: rgb(70, 68, 68);
         display: flex;
