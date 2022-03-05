@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*Se crea la grilla general que servira para distribuir el contenido del index*/
 #grillaGeneral{
@@ -645,3 +646,653 @@
 
 
 
+=======
+
+/*Se crea la grilla general que servira para distribuir el contenido del index*/
+#grillaGeneral{
+    display: grid;
+}
+
+/*se crea la media query correspondiente a formatos que tengan un width mayor a 992px*/
+@media only screen and (min-width: 992px) {
+
+    /*se aplica al body color rgb, margin y width segun descripcion */
+    body{
+        background-color:rgb(255, 255, 255);
+        margin-right: 0;
+        width: 100%;
+    }
+    /* se crean las 3 columnas y 4 filas de la grilla con los nombres correspondientes*/
+    #grillaGeneral{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 700px 300px 300px 450px;
+        background-color: white;
+        grid-template-areas: "portada portada portada"
+                             "asecon asetri asefin"
+                             "aselab capa blanco"
+                             "portada2 portada2 portada2";
+        justify-items: center;
+        align-items: center;
+    }
+    /* se establecen a donde iran las secciones de la pagina principal a cada area de la grilla */
+    #portada{
+        grid-area: portada;
+        width: 100%;
+    }
+    #primerservicio{
+        grid-area: asecon;
+        height: 100%;
+    }
+    #segundoservicio{
+        grid-area: asetri;
+        height: 100%;
+    }
+    #tercerservicio{
+        grid-area: asefin;
+        height: 100%;
+    }
+    #cuartoservicio{
+        grid-area: aselab;
+        height: 100%;
+    }
+    #quintoservicio{
+        grid-area: capa;
+        height: 100%;
+    }
+    #sextoservicio{
+        grid-area: blanco;
+        height: 100%;
+    }
+    #portada2{
+        grid-area: portada2;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(226, 243, 240);
+    }
+
+    /* se definen los valores del header que incluye el titulo principal y el menu del navigation*/
+    header{
+        width: 100%;
+        padding: auto;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-wrap: wrap;
+        background-color: white;
+    }
+
+    /*clase correspondiente al fondo de la portada principal, agregando una altura y este centrada*/
+    .fondo {
+        background-image: url(Imagenes/portada.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* clase correspondiente a los parrafos de la portada asignando un tamanio */
+    .fondo p{
+        margin-left: 90px;
+    }
+    /*se define el estilo del primer parrafo*/
+    .parrafo1{
+        color: blue;
+        margin: 2px;
+        margin-left: 5px;
+        font-style:italic;
+        font-size: 60px;
+    }
+    /*se define el estilo del segundo parrafo*/
+    .parrafo2{
+        color: black;
+        margin: 2px;
+        margin-left: 5px;
+        font-style: normal;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+    }
+    /*se define el estilo del tercer parrafo*/
+    .parrafo3{
+        color: black;
+        margin: 2px;
+        margin-left: 5px;
+        font-style: normal;
+        font-size: 28px;
+    }
+    /*se define el estilo del cuarto parrafo*/
+    .parrafo4{
+        background-color: red;
+        color: white;
+        margin-top: 10px;
+        margin-left: 5px;
+        padding: 15px;
+        width: 10%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style:normal;
+        font-size: 12px;
+        text-align: center;
+    }
+    /*se define el estilo de color que dirige a la seccion "contactanos"*/
+    .parrafo4 a{
+        color: white;
+        text-decoration: none;
+    }
+    .parrafo4 a:hover{
+        font-size: 14px;
+        transition: 2s;
+    }
+
+    /*clase general que define el estilo de los contenedores que llevan las secciones de los servicios principales*/
+    .boxcontent{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border-width: 0px;
+        width: 100%;
+        margin: 45px;
+    }
+
+    /*clase que hace flex los div que contiene las imagenes */
+    .boxcontent div{
+        display: flex;
+        justify-content: center;
+    }
+    .bi-calculator{
+        font-size: 40px;
+    }
+    .bi-bank2{
+        font-size: 40px;
+    }
+    .bi-bar-chart-line-fill{
+        font-size: 40px;
+    }
+    .bi-briefcase{
+        font-size: 40px;
+    }
+    .bi-mortarboard{
+        font-size: 40px;
+    }
+    /*clase que estable estilo del contenedor que tiene el titulo de los servicio general y ejemplos especificos*/
+    .boxcontentdatos{
+        display: flex;
+        flex-direction: column;
+    }
+    /*clase que define el estilo del titulo*/
+    .boxcontentdatos h3{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        margin: 10px;
+    }
+    /*clase que define el estilo de la etiqueta a*/
+    .boxcontentdatos h3 a{
+        text-decoration: none;
+        color: black;
+    }
+    /*clase que define el estilo de la seudo clase hover con fondo rgb azul*/
+    .boxcontentdatos h3 a:hover{
+        color:rgb(47, 112, 231);
+        font-size: 28px;
+        font-weight: bold;
+        transition: 1.2s;
+    }
+    /*clase que define el estilo de ul*/
+    .boxcontentdatos ul{
+        margin: 0;
+        padding: 0;
+    }
+    /*clase que define el estilo de li definiendo tamaño, estilo de la letra y posición*/
+    .boxcontentdatos li{
+        list-style:unset;
+        font-style:normal;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: left;
+    }
+    .portada2-seccion-head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+    }
+    .portada2-seccion-head-titulo{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 40px;
+        color: rgb(51, 50, 48);
+    }
+    .portada2-seccion-contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+    }
+    .portada2-contenido{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    .portada2-contenido-titulo{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        color: rgb(221, 97, 15);
+        font-weight: bold;
+    }
+    .descripcion-contenido{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(12, 12, 11);
+        font-size: 18px;
+    }
+    
+    /*se crea la clase estilo general del footer*/
+    .bottompage{
+        background-color: rgb(70, 68, 68);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+    }
+    /*se crea la clase que define el contenedor principal de cada seccion del footer*/
+    .bottompagecontent{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottompage-footer-head{
+        height: 30%;
+    }
+    .bottompage-footer-body{
+        height: 70%;
+    }
+    .bottompage-footer-head-title{
+        width: 100%;
+    }
+    /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
+    .enlacescontenido{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .titulos-footer{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+    /*se crea la clase que define los tamaños y especiados de los iconos de los enlaces de interes*/
+    .link-icon{
+        width: 30%;
+        padding-left: 20px;
+    }
+    /*se crea la clase que define el nombre de cada enlace de intereses*/
+    .link-title{
+        width: 70%;
+    }
+    /*se crea la clase que define el estilo de cada nombre de los enlaces de intereses*/
+    .link-title h5{
+        width: 80%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    /*se crea la clase que formate el estilo de la etiqueta a*/
+    .link-title h5 a{
+        text-decoration: none;
+        color: white;
+    }
+    .link-title h5 a:hover{
+        color: rgb(22, 133, 236);
+    }
+    .contacto-contenido{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contacto-datos{
+        display: inline;
+        height: 100%;
+    }
+    .contacto-datos li{
+        list-style: none;
+        width: 100%;
+        height: 30%;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+    /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
+    .bottompagepagos{
+        display: flex;
+        flex-direction: column;
+    }
+    /**/
+    .bottompagepagos li {
+        list-style: none;
+        padding: 10px;
+    }
+}
+
+/*se crea la media query correspondiente a formatos que tengan un width menor a 480px*/
+@media only screen and (max-width: 480px) {
+    body{
+        width: 100%;
+    }   
+    header{
+        width: 100%;
+        background-color: rgb(250, 246, 249);
+    }
+    .toppage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .toppage h1{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .toppage h1 a{
+     text-decoration: none;
+     color: brown;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .menu li{
+        display: inline-block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px;
+        width: 100%;
+        padding: 5px 0;
+    }
+    .menu li a{
+        text-decoration: none;
+        width: 100%;
+        color: blue;
+    }
+   
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #grillaGeneral{
+        grid-template-columns: 100%;
+        grid-template-rows: 350px 300px 300px 300px 300px 300px 0px 450px;
+        background-color: white;
+        grid-template-areas: "portada"
+                             "asecon"
+                             "asetri"
+                             "asefin"
+                             "aselab"
+                             "capa"
+                             "blanco"
+                             "portada2"
+                             ;
+        justify-items: center;
+        align-items: center;
+    }
+    #portada{
+        grid-area: portada;
+        width: 90%;
+        height: 90%;
+        background-image: url(imagenes/portada.jpg);
+        background-size: cover;
+    }
+    #primerservicio{
+        grid-area: asecon;
+        width: 90%;
+        height: 90%;
+        background-image: url(imagenes/fondoservicios.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    #segundoservicio{
+        grid-area: asetri;
+        width: 90%;
+        height: 90%;
+        background-image: url(imagenes/fondoservicios.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    #tercerservicio{
+        grid-area: asefin;
+        width: 90%;
+        height: 90%;
+        background-image: url(imagenes/fondoservicios.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    #cuartoservicio{
+        grid-area: aselab;
+        width: 90%;
+        height: 90%;
+        background-image: url(imagenes/fondoservicios.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    #quintoservicio{
+        grid-area: capa;
+        width: 90%;
+        height: 90%;
+        background-image: url(imagenes/fondoservicios.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    #sextoservicio{
+        grid-area: blanco;
+        width: 90%;
+        height: 90%;
+        background-image: url(imagenes/fondoservicios.jpg);
+        background-size: cover;
+    }
+    #portada2{
+        grid-area: portada2;
+        width: 90%;
+        height: 90%;
+        background-color: rgb(70, 68, 68);
+    }
+    
+    .parrafo1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-style: oblique;
+        color: blue;
+        font-size: 25px;
+        width: 100%;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    .parrafo2 {
+        width: 100%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: larger;
+        margin: 0;
+        margin-left: 15px;
+    }
+    .parrafo4 { 
+        width: 100%;
+        
+    }
+    .parrafo4 a{ 
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        background-color: red;
+        margin-left: 15px;
+        height: 20px;
+    }
+    .boxcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bi-calculator{
+        font-size: 30px;
+    }
+    .bi-bank2{
+        font-size: 30px;
+    }
+    .bi-bar-chart-line-fill{
+        font-size: 30px;
+    }
+    .bi-bar-chart-line-fill{
+        font-size: 30px;
+    }
+
+    .bi-mortarboard{
+        font-size: 30px;
+    }
+    .boxcontentdatos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .boxcontentdatos h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 23px;
+        margin: 0px;
+    }
+    .boxcontentdatos h3 a{
+        text-decoration: none;
+        color: blue;
+    }
+    .portada2-seccion-head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .portada2-seccion-head-titulo{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        color: whitesmoke;
+    }
+    .portada2-seccion-contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .portada2-contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .portada2-contenido-titulo{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        color: darkgoldenrod;
+    }
+    .descripcion-contenido{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        color: whitesmoke;
+        width: 95%;
+    }   
+    .bottompage{
+        background-color: rgb(70, 68, 68);
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .bottompagecontent{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .bottompagecontent h4{
+        text-align: center;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .bottompagecontent li{
+        color: white;
+        font-weight: 600;
+        list-style: none;
+        padding: 3px;
+        display: block;
+    }
+    .bottompagecontent li a{
+        text-decoration: none;
+        color: white;
+    }
+    .enlacescontenido{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+    }
+    .link-icon{
+        width: 30%;
+        padding-left: 20px;
+    }
+    .link-title{
+        width: 70%;
+    }
+    .link-title h5{
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 80%;
+    }
+    .link-title h5 a{
+        text-decoration: none;
+        color: rgb(255, 251, 251);
+    }
+
+
+
+}
+
+
+
+
+>>>>>>> cbdba407664e23fc5c41df3ae93ed93974baf80c
