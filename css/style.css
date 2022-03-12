@@ -1,7 +1,4 @@
 @charset "UTF-8";
-h1 {
-  color: red; }
-
 /*Se crea la grilla general que servira para distribuir el contenido del index*/
 #grillaGeneral {
   display: grid; }
@@ -13,15 +10,20 @@ h1 {
     background-color: white;
     margin-right: 0;
     width: 100%; }
+  .contenedor-flex-style-column, .fondo, .contenedor-servicios, .contenedor-servicios-iconos, .portada2-seccion-head, .portada2-seccion-contenido, .portada2-contenido, .bottompagecontent, .contacto-contenido, .contacto-datos li, .bottompagepagos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .contenedor-flex-style-row, .bottompage, .enlacescontenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
   /* se crean las 3 columnas y 4 filas de la grilla con los nombres correspondientes*/
   #grillaGeneral {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 700px 300px 300px 450px;
     background-color: white;
-    grid-template-areas: "portada portada portada"
- "asecon asetri asefin"
- "aselab capa blanco"
- "portada2 portada2 portada2";
+    grid-template-areas: "portada portada portada" "asecon asetri asefin" "aselab capa blanco" "portada2 portada2 portada2";
     justify-items: center;
     align-items: center; }
   /* se establecen a donde iran las secciones de la pagina principal a cada area de la grilla */
@@ -64,37 +66,29 @@ h1 {
     background-color: white; }
   /*clase correspondiente al fondo de la portada principal, agregando una altura y este centrada*/
   .fondo {
-    background-image: url(imagenes/portada.jpg);
+    background-image: url(Imagenes/portada.jpg);
     background-position: center;
     background-size: cover;
-    height: 700px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    height: 700px; }
   /* clase correspondiente a los parrafos de la portada asignando un tamanio */
   .fondo p {
     margin-left: 90px; }
   /*se define el estilo del primer parrafo*/
-  .parrafo1 {
+  .estructura-parrafo, .parrafo1, .parrafo2, .parrafo3 {
     color: blue;
     margin: 2px;
-    margin-left: 5px;
+    margin-left: 5px; }
+  .parrafo1 {
     font-style: italic;
     font-size: 60px; }
   /*se define el estilo del segundo parrafo*/
   .parrafo2 {
-    color: black;
-    margin: 2px;
-    margin-left: 5px;
     font-style: normal;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 30px; }
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
   /*se define el estilo del tercer parrafo*/
   .parrafo3 {
-    color: black;
-    margin: 2px;
-    margin-left: 5px;
     font-style: normal;
     font-size: 28px; }
   /*se define el estilo del cuarto parrafo*/
@@ -117,17 +111,14 @@ h1 {
     font-size: 14px;
     transition: 2s; }
   /*clase general que define el estilo de los contenedores que llevan las secciones de los servicios principales*/
-  .boxcontent {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+  .contenedor-servicios {
+    align-items: center;
     border-width: 0px;
     width: 100%;
     margin: 45px; }
+  .contenedor-servicios-iconos {
+    align-content: center; }
   /*clase que hace flex los div que contiene las imagenes */
-  .boxcontent div {
-    display: flex;
-    justify-content: center; }
   .bi-calculator {
     font-size: 40px; }
   .bi-bank2 {
@@ -139,55 +130,50 @@ h1 {
   .bi-mortarboard {
     font-size: 40px; }
   /*clase que estable estilo del contenedor que tiene el titulo de los servicio general y ejemplos especificos*/
-  .boxcontentdatos {
+  .contenedor-servicios-datos {
     display: flex;
     flex-direction: column; }
   /*clase que define el estilo del titulo*/
-  .boxcontentdatos h3 {
+  .contenedor-servicios-datos h3 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-family: Georgia;
+    font-size: 30px;
     margin: 10px; }
   /*clase que define el estilo de la etiqueta a*/
-  .boxcontentdatos h3 a {
+  .contenedor-servicios-datos h3 a {
     text-decoration: none;
     color: black; }
   /*clase que define el estilo de la seudo clase hover con fondo rgb azul*/
-  .boxcontentdatos h3 a:hover {
+  .contenedor-servicios-datos h3 a:hover {
     color: #2f70e7;
+    font-style: normal;
     font-size: 28px;
     font-weight: bold;
     transition: 1.2s; }
   /*clase que define el estilo de ul*/
-  .boxcontentdatos ul {
+  .contenedor-servicios-datos ul {
     margin: 0;
     padding: 0; }
   /*clase que define el estilo de li definiendo tamaño, estilo de la letra y posición*/
-  .boxcontentdatos li {
+  .contenedor-servicios-datos li {
     list-style: unset;
     font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: left; }
   .portada2-seccion-head {
-    display: flex;
-    justify-content: center;
     align-items: center;
     height: 20%; }
   .portada2-seccion-head-titulo {
     font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
     font-size: 40px;
     color: #333230; }
   .portada2-seccion-contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 80%; }
   .portada2-contenido {
-    display: flex;
-    flex-direction: column;
     width: 60%; }
   .portada2-contenido-titulo {
     font-family: 'Courier New', Courier, monospace;
@@ -197,22 +183,17 @@ h1 {
   .descripcion-contenido {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #0c0c0b;
+    font-style: oblique;
     font-size: 18px; }
   /*se crea la clase estilo general del footer*/
   .bottompage {
     background-color: #464444;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     width: 100%;
     height: 300px; }
   /*se crea la clase que define el contenedor principal de cada seccion del footer*/
   .bottompagecontent {
     width: 30%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center; }
   .bottompage-footer-head {
     height: 30%; }
@@ -222,13 +203,11 @@ h1 {
     width: 100%; }
   /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
   .enlacescontenido {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     width: 100%; }
   .titulos-footer {
     font-family: 'Open Sans', sans-serif;
+    font-style: normal;
     font-size: 20px;
     color: white; }
   /*se crea la clase que define los tamaños y especiados de los iconos de los enlaces de interes*/
@@ -241,7 +220,7 @@ h1 {
   /*se crea la clase que define el estilo de cada nombre de los enlaces de intereses*/
   .link-title h5 {
     width: 80%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Verdana;
     font-size: 15px; }
   /*se crea la clase que formate el estilo de la etiqueta a*/
   .link-title h5 a {
@@ -252,9 +231,6 @@ h1 {
   .contacto-contenido {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center; }
   .contacto-datos {
     display: inline;
@@ -263,16 +239,13 @@ h1 {
     list-style: none;
     width: 100%;
     height: 30%;
-    justify-content: center;
     align-items: center;
     color: white;
+    font-style: oblique;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     text-align: center; }
   /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
-  .bottompagepagos {
-    display: flex;
-    flex-direction: column; }
   /**/
   .bottompagepagos li {
     list-style: none;
@@ -329,14 +302,7 @@ h1 {
     grid-template-columns: 100%;
     grid-template-rows: 350px 300px 300px 300px 300px 300px 0px 450px;
     background-color: white;
-    grid-template-areas: "portada"
- "asecon"
- "asetri"
- "asefin"
- "aselab"
- "capa"
- "blanco"
- "portada2";
+    grid-template-areas: "portada" "asecon" "asetri" "asefin" "aselab" "capa" "blanco" "portada2";
     justify-items: center;
     align-items: center; }
   #portada {
@@ -429,7 +395,11 @@ h1 {
     background-color: red;
     margin-left: 15px;
     height: 20px; }
-  .boxcontent {
+  .contenedor-servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contenedor-servicios-iconos {
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -443,15 +413,15 @@ h1 {
     font-size: 30px; }
   .bi-mortarboard {
     font-size: 30px; }
-  .boxcontentdatos {
+  .contenedor-servicios-datos {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .boxcontentdatos h3 {
+  .contenedor-servicios-datos h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 23px;
     margin: 0px; }
-  .boxcontentdatos h3 a {
+  .contenedor-servicios-datos h3 a {
     text-decoration: none;
     color: blue; }
   .portada2-seccion-head {
