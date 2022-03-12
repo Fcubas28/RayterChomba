@@ -5,6 +5,7 @@ body{
     right: 0;
     left: 0;
 }
+@import "_estructuras.scss";
 @import "_tipografias";
 /*se crea la grilla principal de la pagina de noticias*/
 #grillaGeneralNoticias{
@@ -12,7 +13,6 @@ body{
 }
  /*se crea la media query correspondiente cuando el navegado usado es mayor a 992px*/   
  @media only screen and (min-width: 992px){
-
     /*clase general del encabezado, se repite en todas las secciones de la pagina */
         header{
             width: 100%;
@@ -24,20 +24,6 @@ body{
             right: 0;
             flex-wrap: wrap;
             background-color: white;
-        }
-        .contenedor-flex-style-column{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .contenedor-flex-style-row{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-        @mixin alturaxancho($height,$width) {
-            width: $width;
-            height: $height;
         }
     /*grilla general de la pagina de noticias que contiene 2 columnas y 3 filas con sus respectivas areas nombradas*/
         #grillaGeneralNoticias{
@@ -69,50 +55,10 @@ body{
             grid-area: noticia4;
         }
         /*clase que define el encabezado de la pagina, titulo y menu de navegacion de la pagina que se repite en todas las secciones principales de todas la pagianas*/
-        .toppage{
-            position: sticky;
-        }
-        .toppage h1{
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 10px;
-            padding: 5px;
-        }
-        .toppage h1 a{
-            text-decoration: none;
-            color: blue;
-        }
-        
         nav{
             padding: 1px;
             display: flex;
             text-align: center;
-        }
-        .menu{
-            list-style: none;
-            padding: 0;
-            width: auto;
-            max-width: 800px;
-            margin: auto;
-        }
-        .menu li{
-            display: inline-block;
-            text-align: center;
-        }
-        .menu li a{
-            text-decoration: none;
-            color: rgba(10, 6, 6, 0.979);
-            padding: 20px;
-            display: block;
-        }
-        .menu li a:hover{
-            background-color: rgb(248, 246, 248);
-            border-bottom: solid 1px blue;
-            
-        }
-        .nav-link-active{
-            background-color:whitesmoke;
-            font-weight: bold;
-            border-bottom: solid 1px red;
         }
         main{
             left: 0;
@@ -143,7 +89,7 @@ body{
         }
         /*se crea la clase que define el estilo de la primera noticia, principalmente la composicion de los elementos de cada seccion de noticias, es igual para todas la noticias*/
         .primeranoticia{
-            @extend .contenedor-flex-style-column;
+            @include flex-column;
             align-items: center;
             margin-right: 10px;
             margin-left: 50px;
@@ -151,7 +97,7 @@ body{
         }
         /*se crea la clase que define el estilo de la segunda noticia, principalmente la composicion de los elementos de cada seccion de noticias, es igual para todas la noticias*/
         .segundanoticia{
-            @extend .contenedor-flex-style-column;
+            @include flex-column;;
             align-items: center;
             margin-right: 50px;
             margin-left: 10px;
@@ -160,7 +106,7 @@ body{
         }
         /*se crea la clase que define el estilo de la tercera noticia, principalmente la composicion de los elementos de cada seccion de noticias, es igual para todas la noticias*/
         .terceranoticia{
-            @extend .contenedor-flex-style-column;
+            @include flex-column;
             align-items: center;
             margin-right: 10px;
             margin-left: 50px;
@@ -168,7 +114,7 @@ body{
         }
         /*se crea la clase que define el estilo de la tercera noticia, principalmente la composicion de los elementos de cada seccion de noticias, es igual para todas la noticias*/
         .cuartanoticia{
-            @extend .contenedor-flex-style-column;
+            @include flex-column;
             align-items: center;
             margin-right: 50px;
             margin-left: 10px;
@@ -201,13 +147,13 @@ body{
         }
         .bottompage{
             background-color: rgb(70, 68, 68);
-            @extend .contenedor-flex-style-row;
+            @include flex-row;
             @include alturaxancho(300px,100%);
         }
         /*se crea la clase que define el contenedor principal de cada seccion del footer*/
         .bottompagecontent{
             @include alturaxancho(100%,30% );
-            @extend .contenedor-flex-style-column;
+            @include flex-column;
             align-items: center;
         }
         .bottompage-footer-head{
@@ -221,7 +167,7 @@ body{
         }
         /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
         .enlacescontenido{
-            @extend .contenedor-flex-style-row;
+            @include flex-row;
             align-items: center;
             width: 100%;
         }
@@ -255,7 +201,7 @@ body{
         }
         .contacto-contenido{
             @include alturaxancho(100%,100% );
-            @extend .contenedor-flex-style-column;
+            @include flex-column;
             align-items: center;
         }
         .contacto-datos{
@@ -275,7 +221,7 @@ body{
         
         /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
         .bottompagepagos{
-            @extend .contenedor-flex-style-column;
+            @include flex-column;
         }
         /**/
         .bottompagepagos li {
@@ -288,16 +234,6 @@ body{
     body{
         width: 100%;
     }
-    .contenedor-flex-style-column-mobile{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .contenedor-flex-style-row-mobile{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
     main{
         width: 100%;
         margin: 0;
@@ -305,48 +241,6 @@ body{
     header{
         width: 100%;
         background-color: rgb(250, 246, 249);
-    }
-    .toppage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-    }
-    nav{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-    }
-    .toppage h1{
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 15px;
-        margin-bottom: 10px;
-        width: 100%;
-    }
-    .toppage h1 a{
-     text-decoration: none;
-     color: brown;
-    }
-    .menu{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 5px;
-    }
-    .menu li{
-        display: inline-block;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 10px;
-        width: 100%;
-        padding: 5px 0;
-    }
-    .menu li a{
-        text-decoration: none;
-        width: 100%;
-        color: blue;
     }
     #grillaGeneralNoticias{
         grid-template-columns: 100%;
@@ -363,8 +257,7 @@ body{
     }
     #noticia1{
         grid-area: noticia1;
-        width: 100%;
-        height: 100%;
+        @include alturaxancho(100%,100%);
     }
     #noticia2{
         grid-area: noticia2;
@@ -381,15 +274,13 @@ body{
     .toppagenoticias{
         background-image: url(Imagenes/fondonoticias.jpg);
         background-size: cover;
-        height: 100%;
-        width: 90%;
+        @include alturaxancho(100%,90%);
         display: flex;
         justify-content: center;
         align-items: flex-end;
         margin: auto;
         margin-bottom: 5px;
     }
-    
     .toppagenoticias h2{    
         font-family: Georgia, 'Times New Roman', Times, serif;
         text-align: center;
@@ -397,24 +288,23 @@ body{
         font-weight: bold;
         color:rgb(239, 240, 243);
     }
-
     .primeranoticia{
-        @extend .contenedor-flex-style-column-mobile;
+        @include flex-column;
         align-items: center;
         margin-top: 5px;
     }
     .segundanoticia{
-        @extend .contenedor-flex-style-column-mobile;
+        @include flex-column;
         align-items: center;
         margin-top: 5px;
     }
     .terceranoticia{
-        @extend .contenedor-flex-style-column-mobile;
+        @include flex-column;
         align-items: center;
         margin-top: 5px;
     }
     .cuartanoticia{
-        @extend .contenedor-flex-style-column-mobile;
+        @include flex-column;
         align-items: center;
         margin-top: 5px;
     }
@@ -442,16 +332,12 @@ body{
         margin-top: 15px;
         font-size: 13px;
     }
-    
     .bottompage{
         background-color: rgb(70, 68, 68);
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
     }
     .bottompagecontent{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
+        @include flex-column;
     }
     .bottompagecontent h4{
         text-align: center;
@@ -470,9 +356,7 @@ body{
         color: white;
     }
     .enlacescontenido{
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
+        @include flex-row;
         align-items: center;
     }
     .link-icon{

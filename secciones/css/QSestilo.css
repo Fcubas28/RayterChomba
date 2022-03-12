@@ -1,411 +1,297 @@
+@charset "UTF-8";
+body {
+  background-color: #faf6fc;
+  margin: 0;
+  right: 0;
+  left: 0; }
 
-body{
-    background-color:rgb(250, 246, 252);
-    margin: 0;
-    right: 0;
+#gridQSprincipal {
+  display: grid; }
+
+@media only screen and (min-width: 922px) {
+  header {
+    width: 100%;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    top: 0;
     left: 0;
-}
-#gridQSprincipal{
-    display: grid;
-}
-@media only screen and (min-width:922px){
-    header{
-        width: 100%;
-        padding: auto;
-        display: flex;
-        justify-content: center;
-        top: 0;
-        left: 0;
-        right: 0;
-        flex-wrap: wrap;
-        background-color: white;
-    }
+    right: 0;
+    flex-wrap: wrap;
+    background-color: white; }
+  nav {
+    padding: 1px;
+    display: flex;
+    text-align: center; }
+  main {
+    left: 0;
+    right: 0; }
+  #gridQSprincipal {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px 350px 500px;
+    grid-template-areas: "titulo titulo" "conocenos1 conocenos2"   "conocenos1 conocenos3"; }
+  #portada-nosotros {
+    grid-area: titulo;
+    width: 100%;
+    background-image: url(Imagenes/fondo-principal-contactanos.jpg);
+    background-position: center;
+    background-size: cover; }
+  #seccion1 {
+    grid-area: conocenos1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  #seccion2 {
+    grid-area: conocenos2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  #seccion3 {
+    grid-area: conocenos3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; }
+  .portada-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  .style-titulo {
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: 50px;
+    color: #ee2f22; }
+  .fondo-seccion1 {
+    background-image: url(Imagenes/fondo-quienes-somos.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 50%; }
+  .fondo-seccion1:hover {
+    width: 85%;
+    height: 60%;
+    transition: 2s; }
+  .contenido-seccion2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%; }
+  .seccion2-titulo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .style-titulo-seccion2 {
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: 30px; }
+  .seccion2-descripcion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .style-descripcion-seccion2 {
+    font-family: 'Roboto Serif', sans-serif;
+    width: 80%;
+    height: 80%; }
+  .contenido-seccion3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+  .titulo-contenido-seccion3 {
+    font-family: 'Roboto Serif', sans-serif;
+    text-align: center;
+    color: brown;
+    font-size: 20px;
+    width: 80%; }
+  .descripcion-contenido-seccion3 {
+    font-family: 'Roboto Serif', sans-serif;
+    width: 80%; }
+  .bottompage {
+    background-color: #464444;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 300px; }
+  /*se crea la clase que define el contenedor principal de cada seccion del footer*/
+  .bottompagecontent {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .bottompage-footer-head {
+    height: 30%; }
+  .bottompage-footer-body {
+    height: 70%; }
+  .bottompage-footer-head-title {
+    width: 100%; }
+  /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
+  .enlacescontenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  .titulos-footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: white; }
+  /*se crea la clase que define los tamaños y especiados de los iconos de los enlaces de interes*/
+  .link-icon {
+    width: 30%;
+    padding-left: 20px; }
+  /*se crea la clase que define el nombre de cada enlace de intereses*/
+  .link-title {
+    width: 70%; }
+  /*se crea la clase que define el estilo de cada nombre de los enlaces de intereses*/
+  .link-title h5 {
+    width: 80%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px; }
+  /*se crea la clase que formate el estilo de la etiqueta a*/
+  .link-title h5 a {
+    text-decoration: none;
+    color: white; }
+  .link-title h5 a:hover {
+    color: #1685ec; }
+  .contacto-contenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .contacto-datos {
+    display: inline;
+    height: 100%; }
+  .contacto-datos li {
+    list-style: none;
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; }
+  /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
+  .bottompagepagos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .bottompagepagos li {
+    list-style: none;
+    padding: 10px; } }
 
-    .toppage{
-        position: sticky;
-    }
-    .toppage h1{
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin: 10px;
-        padding: 5px;
-    }
-    .toppage h1 a{
-        text-decoration: none;
-        color: blue;
-    }
-    
-    nav{
-        padding: 1px;
-        display: flex;
-        text-align: center;
-    }
-    .menu{
-        list-style: none;
-        padding: 0;
-        width: auto;
-        max-width: 800px;
-        margin: auto;
-    }
-    .menu li{
-        display: inline-block;
-        text-align: center;
-    }
-    .menu li a{
-        text-decoration: none;
-        color: rgba(10, 6, 6, 0.979);
-        padding: 20px;
-        display: block;
-    }
-    .menu li a:hover{
-        background-color: rgb(248, 246, 248);
-        border-bottom: solid 1px blue;
-    }
-    .nav-link-active{
-        background-color:whitesmoke;
-        font-weight: bold;
-        border-bottom: solid 1px red;
-    }
-    main{
-        left: 0;
-        right: 0;
-    }
-
-    #gridQSprincipal{
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 300px 350px 500px ;
-        grid-template-areas: "titulo titulo"
-                              "conocenos1 conocenos2"  
-                              "conocenos1 conocenos3"
-                              ;
-    }
-    #portada-nosotros{
-        grid-area: titulo;
-        width: 100%;
-        background-image: url(Imagenes/fondo-principal-contactanos.jpg);
-        background-position: center;
-        background-size: cover;
-    }   
-    #seccion1{
-        grid-area: conocenos1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-    #seccion2{
-        grid-area: conocenos2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-    #seccion3{
-        grid-area: conocenos3;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-    }
-    .portada-titulo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-    .style-titulo{
-        font-family: 'Roboto Serif', sans-serif;
-        font-size: 50px;
-        color: rgb(238, 47, 34);
-    }
-    .fondo-seccion1{
-        background-image: url(Imagenes/fondo-quienes-somos.jpg);
-        background-size: cover;
-        width: 80%;
-        height: 50%;
-    }
-    .fondo-seccion1:hover{
-        width: 85%;
-        height: 60%;
-        transition: 2s;
-    }
-    .contenido-seccion2{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 100%;
-    }
-    .seccion2-titulo{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .style-titulo-seccion2{
-        font-family: 'Roboto Serif', sans-serif;
-        font-size: 30px;
-    }
-    .seccion2-descripcion{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .style-descripcion-seccion2{
-        font-family: 'Roboto Serif', sans-serif;
-        height: 80%;
-        width: 80%;
-    }
-    .contenido-seccion3{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    .titulo-contenido-seccion3{
-        font-family: 'Roboto Serif', sans-serif;
-        text-align: center;
-        color: brown;
-        font-size: 20px;
-        width: 80%;
-    }
-    .descripcion-contenido-seccion3{
-        font-family: 'Roboto Serif', sans-serif;
-        width: 80%;
-    }
-    .bottompage{
-        background-color: rgb(70, 68, 68);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        height: 300px;
-    }
-    /*se crea la clase que define el contenedor principal de cada seccion del footer*/
-    .bottompagecontent{
-        width: 30%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .bottompage-footer-head{
-        height: 30%;
-    }
-    .bottompage-footer-body{
-        height: 70%;
-    }
-    .bottompage-footer-head-title{
-        width: 100%;
-    }
-    /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
-    .enlacescontenido{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .titulos-footer{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 20px;
-        color: white;
-    }
-    /*se crea la clase que define los tamaños y especiados de los iconos de los enlaces de interes*/
-    .link-icon{
-        width: 30%;
-        padding-left: 20px;
-    }
-    /*se crea la clase que define el nombre de cada enlace de intereses*/
-    .link-title{
-        width: 70%;
-    }
-    /*se crea la clase que define el estilo de cada nombre de los enlaces de intereses*/
-    .link-title h5{
-        width: 80%;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-    }
-    /*se crea la clase que formate el estilo de la etiqueta a*/
-    .link-title h5 a{
-        text-decoration: none;
-        color: white;
-    }
-    .link-title h5 a:hover{
-        color: rgb(22, 133, 236);
-    }
-    .contacto-contenido{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .contacto-datos{
-        display: inline;
-        height: 100%;
-    }
-    .contacto-datos li{
-        list-style: none;
-        width: 100%;
-        height: 30%;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 18px;
-        font-family: 'Open Sans', sans-serif;
-        text-align: center;
-    }
-
-    /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
-    .bottompagepagos{
-        display: flex;
-        flex-direction: column;
-    }
-    /**/
-    .bottompagepagos li {
-        list-style: none;
-        padding: 10px;
-    }
-}   
-@media only screen and (max-width:480px){
-    header{
-        width: 100%;
-    }
-    #gridQSprincipal{
-        grid-template-columns: 90%;
-        grid-template-rows: 150px 250px 300px ;
-        grid-template-areas:  "titulo"
-                              "conocenos1"  
-                              "conocenos2"
-                              "conocenos3"
-                              ;
-        justify-content: center;
-
-    }
-    #portada-nosotros{
-        grid-area: titulo;
-        background-image: url(Imagenes/fondo-principal-contactanos.jpg);
-        background-size: cover;
-        margin-bottom: 5px;
-    }
-    #seccion1{
-        grid-area: conocenos1;
-        background-image: url(Imagenes/fondo-quienes-somos.jpg);
-        background-size: cover;
-        margin-bottom: 5px;
-    }
-    #seccion2{
-        grid-area: conocenos2;
-        margin-bottom: 5px;
-    }
-    #seccion3{
-        grid-area: conocenos3;
-        margin-bottom: 5px;
-    }
-    .portada-titulo{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        height: 100%;
-    }
-    .style-titulo{
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 28px;
-        font-weight: bold;
-        color: white;
-    }
-    .contenido-seccion2{
-        display: flex;
-        flex-direction: column;
-    }
-    .seccion2-titulo{
-        align-items: center;
-    }
-    .style-titulo-seccion2{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 18px;
-        font-weight: bold;
-        color: blue;
-    }
-    .seccion2-descripcion{
-        display: flex;
-        flex-direction: column;
-    }
-    .style-descripcion-seccion2{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 15px;
-    }
-    .contenido-seccion3{
-        display: flex;
-        flex-direction: column;
-    }
-    .titulo-contenido-seccion3{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 15px;
-        font-weight: bold;
-    }
-    .descripcion-contenido-seccion3{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 13px;
-    }
-    .bottompage{
-        background-color: rgb(70, 68, 68);
-        display: flex;
-        flex-direction: column;
-    }
-    .bottompagecontent{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-    }
-    .bottompagecontent h4{
-        text-align: center;
-        color: white;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    .bottompagecontent li{
-        color: white;
-        font-weight: 600;
-        list-style: none;
-        padding: 3px;
-        display: block;
-    }
-    .bottompagecontent li a{
-        text-decoration: none;
-        color: white;
-    }
-    .enlacescontenido{
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
-        align-items: center;
-    }
-    .link-icon{
-        width: 30%;
-        padding-left: 20px;
-    }
-    .link-title{
-        width: 70%;
-    }
-    .link-title h5{
-        font-size: 14px;
-        font-family: Arial, Helvetica, sans-serif;
-        width: 80%;
-    }
-    .link-title h5 a{
-        text-decoration: none;
-        color: rgb(255, 251, 251);
-    }
-}
+@media only screen and (max-width: 480px) {
+  header {
+    width: 100%; }
+  #gridQSprincipal {
+    grid-template-columns: 90%;
+    grid-template-rows: 150px 250px 300px;
+    grid-template-areas: "titulo" "conocenos1"   "conocenos2" "conocenos3";
+    justify-content: center; }
+  #portada-nosotros {
+    grid-area: titulo;
+    background-image: url(Imagenes/fondo-principal-contactanos.jpg);
+    background-size: cover;
+    margin-bottom: 5px; }
+  #seccion1 {
+    grid-area: conocenos1;
+    background-image: url(Imagenes/fondo-quienes-somos.jpg);
+    background-size: cover;
+    margin-bottom: 5px; }
+  #seccion2 {
+    grid-area: conocenos2;
+    margin-bottom: 5px; }
+  #seccion3 {
+    grid-area: conocenos3;
+    margin-bottom: 5px; }
+  .portada-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+  .style-titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: white; }
+  .contenido-seccion2 {
+    display: flex;
+    flex-direction: column; }
+  .seccion2-titulo {
+    align-items: center; }
+  .style-titulo-seccion2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: blue; }
+  .seccion2-descripcion {
+    display: flex;
+    flex-direction: column; }
+  .style-descripcion-seccion2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px; }
+  .contenido-seccion3 {
+    display: flex;
+    flex-direction: column; }
+  .titulo-contenido-seccion3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: bold; }
+  .descripcion-contenido-seccion3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px; }
+  .bottompage {
+    background-color: #464444;
+    display: flex;
+    flex-direction: column; }
+  .bottompagecontent {
+    display: flex;
+    flex-direction: column;
+    justify-items: center; }
+  .bottompagecontent h4 {
+    text-align: center;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  .bottompagecontent li {
+    color: white;
+    font-weight: 600;
+    list-style: none;
+    padding: 3px;
+    display: block; }
+  .bottompagecontent li a {
+    text-decoration: none;
+    color: white; }
+  .enlacescontenido {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center; }
+  .link-icon {
+    width: 30%;
+    padding-left: 20px; }
+  .link-title {
+    width: 70%; }
+  .link-title h5 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%; }
+  .link-title h5 a {
+    text-decoration: none;
+    color: #fffbfb; } }
