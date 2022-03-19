@@ -324,9 +324,9 @@ body{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     .noticia-contenido{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
+        @include alturaxancho(100%,80%);
+        @include flex-column;
+
     }
     .noticia-contenido p{
         margin-top: 15px;

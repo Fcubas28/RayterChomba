@@ -29,7 +29,6 @@ body{
         left: 0;
         right: 0;
     }
-
     #gridQSprincipal{
         grid-template-columns: 50% 50%;
         grid-template-rows: 300px 350px 500px ;
@@ -50,29 +49,25 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        @include alturaxancho(100%,100%);
     }
     #seccion2{
         grid-area: conocenos2;
         @include flex-column;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        @include alturaxancho(100%,100%);
     }
     #seccion3{
         grid-area: conocenos3;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 100%;
+        @include alturaxancho(100%,100%);
     }
     .portada-titulo{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        @include alturaxancho(100%,100%);
     }
     .style-titulo{
         font-family: 'Roboto Serif', sans-serif;
@@ -82,8 +77,7 @@ body{
     .fondo-seccion1{
         background-image: url(Imagenes/fondo-quienes-somos.jpg);
         background-size: cover;
-        width: 80%;
-        height: 50%;
+        @include alturaxancho(50%,80%);
     }
     .fondo-seccion1:hover{
         @include alturaxancho(60%,85%);
@@ -297,9 +291,7 @@ body{
         flex-direction: column;
     }
     .bottompagecontent{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
+        @include flex-column;
     }
     .bottompagecontent h4{
         text-align: center;
@@ -318,9 +310,7 @@ body{
         color: white;
     }
     .enlacescontenido{
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
+        @include flex-row;
         align-items: center;
     }
     .link-icon{

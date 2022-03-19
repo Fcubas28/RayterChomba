@@ -219,8 +219,7 @@ body{
     }
     .contacto-datos li{
         list-style: none;
-        width: 100%;
-        height: 30%;
+        @include alturaxancho(30%,100%);
         justify-content: center;
         align-items: center;
         color: white;
@@ -257,52 +256,36 @@ body{
         background-image: url(Imagenes/fondo-linea-servicios);
         background-size: cover;
         justify-self: center;
-        height: 100%;
-        width: 95%;
+        @include alturaxancho(100%,95%);
     }
     #AsesoriaContable{
         grid-area: AContable;
-        height: 100%;
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
+        @include alturaxancho(100%,95%);
+        @include flex-column-self-center;
         margin-top: 10px;   
     }
     #AsesoriaTributaria{
         grid-area: ATributaria;
-        height: 100%;
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
+        @include alturaxancho(100%,95%);
+        @include flex-column-self-center;
         margin-top: 10px;
     }
     #AsesoriaFinanciera{
         grid-area: AFinanciera;
-        height: 100%;
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
+        @include alturaxancho(100%,95%);
+        @include flex-column-self-center;
         margin-top: 10px;
     }
     #AsesoriaLaboral{
         grid-area: ALaboral;
-        height: 100%;
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
+        @include alturaxancho(100%,95%);
+        @include flex-column-self-center;
         margin-top: 10px;
     }
     #Capacitaciones{
         grid-area: Capacitaciones;
-        height: 100%;
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
+        @include alturaxancho(100%,95%);
+        @include flex-column-self-center;
         margin-top: 10px;
     }
     .toppagelinea{
@@ -341,7 +324,6 @@ body{
         font-family: 'Times New Roman', Times, serif;
         font-size: 15px;
     }
-
     .contenidobox1 h3 a{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         text-decoration: none;
@@ -357,9 +339,7 @@ body{
         flex-direction: column;
     }
     .bottompagecontent{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
+        @include flex-column;
     }
     .bottompagecontent h4{
         text-align: center;
@@ -378,9 +358,7 @@ body{
         color: white;
     }
     .enlacescontenido{
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
+        @include flex-row;
         align-items: center;
     }
     .link-icon{

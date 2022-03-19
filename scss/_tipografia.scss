@@ -4,3 +4,8 @@ $tamanio-titulo-h3: 30px;
 $fuente-titulo-h5: Verdana;
 $tamanio-titulo-h5: 15px;
 $color-titulo-h5: white;
+
+@mixin font-stylexsize ($style,$size) {
+    font-style: $style;
+    font-size: $size;
+}

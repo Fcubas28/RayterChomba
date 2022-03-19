@@ -4,6 +4,7 @@
 }
 $icon-font-size: 40px;
 @import "_tipografia.scss";
+@import "_estructura.scss";
 
 /*se crea la media query correspondiente a formatos que tengan un width mayor a 992px*/
 @media only screen and (min-width: 992px) {
@@ -13,24 +14,7 @@ $icon-font-size: 40px;
         margin-right: 0;
         width: 100%;
     }
-    .contenedor-flex-style-column{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .contenedor-flex-style-row{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    @mixin alturaxancho($height,$width) {
-        width: $width;
-        height: $height;
-    }
-    @mixin font-stylexsize ($style,$size) {
-        font-style: $style;
-        font-size: $size;
-    }
+     
     /* se crean las 3 columnas y 4 filas de la grilla con los nombres correspondientes*/
     #grillaGeneral{
         grid-template-columns: 1fr 1fr 1fr;
@@ -97,7 +81,7 @@ $icon-font-size: 40px;
         background-position: center;
         background-size: cover;
         @include alturaxancho(700px, 100%);
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
     }
     /* clase correspondiente a los parrafos de la portada asignando un tamanio */
     .fondo p{
@@ -148,14 +132,14 @@ $icon-font-size: 40px;
     }
     /*clase general que define el estilo de los contenedores que llevan las secciones de los servicios principales*/
     .contenedor-servicios{
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         align-items: center;
         border-width: 0px;
         width: 100%;
         margin: 45px;
     }
     .contenedor-servicios-iconos{
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         align-content: center;
     }
     /*clase que hace flex los div que contiene las imagenes */
@@ -211,7 +195,7 @@ $icon-font-size: 40px;
         text-align: left;
     }
     .portada2-seccion-head{
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         align-items: center;
         height: 20%;
     }
@@ -221,12 +205,12 @@ $icon-font-size: 40px;
         color: rgb(51, 50, 48);
     }
     .portada2-seccion-contenido{
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         align-items: center;
         @include alturaxancho(80%,100%);
     }
     .portada2-contenido{
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         width: 60%;
     }
     .portada2-contenido-titulo{
@@ -244,13 +228,13 @@ $icon-font-size: 40px;
     /*se crea la clase estilo general del footer*/
     .bottompage{
         background-color: rgb(70, 68, 68);
-        @extend .contenedor-flex-style-row;
+        @include flex-row;
         @include alturaxancho(300px,100%);
     }
     /*se crea la clase que define el contenedor principal de cada seccion del footer*/
     .bottompagecontent{
         @include alturaxancho(100%,30%);
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         align-items: center;
     }
     .bottompage-footer-head{
@@ -264,7 +248,7 @@ $icon-font-size: 40px;
     }
     /*se crea estilo para el contenedor general de la seccion Enlaces de interes*/
     .enlacescontenido{
-        @extend .contenedor-flex-style-row;
+        @include flex-row;
         align-items: center;
         width: 100%;
     }
@@ -298,7 +282,7 @@ $icon-font-size: 40px;
     }
     .contacto-contenido{
         @include alturaxancho(100%,100%);
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         align-items: center;
     }
     .contacto-datos{
@@ -307,7 +291,7 @@ $icon-font-size: 40px;
     }
     .contacto-datos li{
         list-style: none;
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
         @include alturaxancho(30%,100%);
         align-items: center;
         color: white;
@@ -317,7 +301,7 @@ $icon-font-size: 40px;
     }
     /*se crea la clase que estable el estilo de la seccion de las formas de pagos de los clientes*/
     .bottompagepagos{
-        @extend .contenedor-flex-style-column;
+        @include flex-column;
     }
     /**/
     .bottompagepagos li {
@@ -333,57 +317,10 @@ $icon-font-size: 40px;
     header{
         width: 100%;
         background-color: rgb(250, 246, 249);
-    }
-    .toppage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-
-    }
-    nav{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-    }
-    .toppage h1{
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 15px;
-        margin-bottom: 10px;
-        width: 100%;
-    }
-    .toppage h1 a{
-     text-decoration: none;
-     color: brown;
-    }
-
-    .menu{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 5px;
-    }
-    .menu li{
-        display: inline-block;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 10px;
-        width: 100%;
-        padding: 5px 0;
-    }
-    .menu li a{
-        text-decoration: none;
-        width: 100%;
-        color: blue;
-    }
-   
+    }   
     main{
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
     }
 
     #grillaGeneral{
@@ -404,77 +341,59 @@ $icon-font-size: 40px;
     }
     #portada{
         grid-area: portada;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-image: url(imagenes/portada.jpg);
         background-size: cover;
     }
     #primerservicio{
         grid-area: asecon;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
         align-content: center;
     }
     #segundoservicio{
         grid-area: asetri;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
         align-content: center;
     }
     #tercerservicio{
         grid-area: asefin;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
         align-content: center;
     }
     #cuartoservicio{
         grid-area: aselab;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
         align-content: center;
     }
     #quintoservicio{
         grid-area: capa;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
         align-content: center;
     }
     #sextoservicio{
         grid-area: blanco;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-image: url(imagenes/fondoservicios.jpg);
         background-size: cover;
     }
     #portada2{
         grid-area: portada2;
-        width: 90%;
-        height: 90%;
+        @include alturaxancho(90%,90%);
         background-color: rgb(70, 68, 68);
     }
     
@@ -516,7 +435,6 @@ $icon-font-size: 40px;
         flex-direction: column;
         align-items: center;
     }
-
     .bi-calculator{
         font-size: 30px;
     }
@@ -547,9 +465,7 @@ $icon-font-size: 40px;
         color: blue;
     }
     .portada2-seccion-head{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
         align-items: center;
         margin-top: 10px;
     }
@@ -559,15 +475,11 @@ $icon-font-size: 40px;
         color: whitesmoke;
     }
     .portada2-seccion-contenido{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
         align-items: center;
     }
     .portada2-contenido{
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
+        @include flex-column;
         align-items: center;
     }
     .portada2-contenido-titulo{
@@ -585,12 +497,9 @@ $icon-font-size: 40px;
         background-color: rgb(70, 68, 68);
         display: flex;
         flex-direction: column;
-        
     }
     .bottompagecontent{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
+        @include flex-column;
     }
     .bottompagecontent h4{
         text-align: center;
@@ -609,9 +518,7 @@ $icon-font-size: 40px;
         color: white;
     }
     .enlacescontenido{
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
+        @include flex-row;
         align-items: center;
     }
     .link-icon{
@@ -630,7 +537,5 @@ $icon-font-size: 40px;
         text-decoration: none;
         color: rgb(255, 251, 251);
     }
-
-
 
 }

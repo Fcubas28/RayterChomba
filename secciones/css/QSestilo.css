@@ -264,7 +264,7 @@ body {
   .bottompagecontent {
     display: flex;
     flex-direction: column;
-    justify-items: center; }
+    justify-content: center; }
   .bottompagecontent h4 {
     text-align: center;
     color: white;
@@ -281,7 +281,7 @@ body {
   .enlacescontenido {
     display: flex;
     flex-direction: row;
-    justify-items: center;
+    justify-content: center;
     align-items: center; }
   .link-icon {
     width: 30%;
