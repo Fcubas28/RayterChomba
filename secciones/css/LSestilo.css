@@ -26,7 +26,12 @@ body {
   #grillaGeneralLServicios {
     grid-template-columns: 100%;
     grid-template-rows: 300px 450px 450px 450px 450px 450px;
-    grid-template-areas: "Titulo" "AContable" "ATributaria" "AFinanciera" "ALaboral" "Capacitaciones"; }
+    grid-template-areas: "Titulo"
+ "AContable"
+ "ATributaria"
+ "AFinanciera"
+ "ALaboral"
+ "Capacitaciones"; }
   #TituloServicios {
     grid-area: Titulo;
     margin-bottom: 20px; }
@@ -203,11 +208,16 @@ body {
     list-style: none;
     padding: 10px; } }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 919px) {
   #grillaGeneralLServicios {
     grid-template-columns: 100%;
     grid-template-rows: 300px 230px 230px 230px 230px 230px;
-    grid-template-areas: "Titulo" "AContable" "ATributaria" "AFinanciera" "ALaboral" "Capacitaciones";
+    grid-template-areas: "Titulo"
+ "AContable"
+ "ATributaria"
+ "AFinanciera"
+ "ALaboral"
+ "Capacitaciones";
     justify-content: center;
     align-items: center; }
   #TituloServicios {

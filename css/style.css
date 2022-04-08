@@ -21,6 +21,12 @@
   /* se establecen a donde iran las secciones de la pagina principal a cada area de la grilla */
   #portada {
     grid-area: portada;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(imagenes/portada.jpg);
+    background-size: cover;
+    height: 100%;
     width: 100%; }
   #primerservicio {
     grid-area: asecon;
@@ -56,16 +62,6 @@
     right: 0;
     flex-wrap: wrap;
     background-color: white; }
-  /*clase correspondiente al fondo de la portada principal, agregando una altura y este centrada*/
-  .fondo {
-    background-image: url(Imagenes/portada.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
   /* clase correspondiente a los parrafos de la portada asignando un tamanio */
   .fondo p {
     margin-left: 90px; }
@@ -281,7 +277,7 @@
     padding: 10px; } }
 
 /*se crea la media query correspondiente a formatos que tengan un width menor a 480px*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 991px) {
   body {
     width: 100%; }
   header {

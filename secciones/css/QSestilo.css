@@ -29,7 +29,9 @@ body {
   #gridQSprincipal {
     grid-template-columns: 50% 50%;
     grid-template-rows: 300px 350px 500px;
-    grid-template-areas: "titulo titulo" "conocenos1 conocenos2"   "conocenos1 conocenos3"; }
+    grid-template-areas: "titulo titulo"
+ "conocenos1 conocenos2"  
+ "conocenos1 conocenos3"; }
   #portada-nosotros {
     grid-area: titulo;
     width: 100%;
@@ -197,13 +199,16 @@ body {
     list-style: none;
     padding: 10px; } }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 921px) {
   header {
     width: 100%; }
   #gridQSprincipal {
     grid-template-columns: 90%;
     grid-template-rows: 150px 250px 300px;
-    grid-template-areas: "titulo" "conocenos1"   "conocenos2" "conocenos3";
+    grid-template-areas: "titulo"
+ "conocenos1"  
+ "conocenos2"
+ "conocenos3";
     justify-content: center; }
   #portada-nosotros {
     grid-area: titulo;

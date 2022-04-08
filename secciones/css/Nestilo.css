@@ -27,7 +27,9 @@ body {
   #grillaGeneralNoticias {
     grid-template-columns: 50% 50%;
     grid-template-rows: 250px 500px 500px;
-    grid-template-areas: "titulo titulo" "noticia1 noticia2" "noticia3 noticia4"; }
+    grid-template-areas: "titulo titulo"
+ "noticia1 noticia2"
+ "noticia3 noticia4"; }
   /*primera seccion de la grilla que corresponde al titulo principal*/
   #tituloNoticias {
     grid-area: titulo;
@@ -209,7 +211,7 @@ body {
     padding: 10px; } }
 
 /*se crea la media query correspondiente cuando el navegado usado es menor a 480px*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 991px) {
   body {
     width: 100%; }
   main {
@@ -221,7 +223,11 @@ body {
   #grillaGeneralNoticias {
     grid-template-columns: 100%;
     grid-template-rows: 180px 450px 450px 450px 450px;
-    grid-template-areas: "tituloNoticias" "noticia1" "noticia2" "noticia3" "noticia4"; }
+    grid-template-areas: "tituloNoticias"
+ "noticia1"
+ "noticia2"
+ "noticia3"
+ "noticia4"; }
   #tituloNoticias {
     grid-area: tituloNoticias; }
   #noticia1 {
